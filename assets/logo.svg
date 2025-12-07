@@ -1,0 +1,55 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <style>
+            .chevron {
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 2;
+            }
+
+            @keyframes floatUpDown {
+                0% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(-1.5px);
+                }
+
+                100% {
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes floatDownUp {
+                0% {
+                    transform: translateY(0);
+                }
+
+                50% {
+                    transform: translateY(1.5px);
+                }
+
+                100% {
+                    transform: translateY(0);
+                }
+            }
+
+            g.top {
+                animation: floatUpDown 2.4s ease-in-out infinite;
+            }
+
+            g.bottom {
+                animation: floatDownUp 2.4s ease-in-out infinite;
+            }
+        </style>
+    </defs>
+
+    <rect x="1" y="1" width="30" height="30" rx="8" fill="white" stroke="#e5e7eb" />
+    <g class="top" transform="translate(0,0)">
+        <path class="chevron" d="M10 15 L16 9 L22 15" stroke="#111827" />
+    </g>
+    <g class="bottom" transform="translate(0,0)">
+        <path class="chevron" d="M10 19 L16 13 L22 19" stroke="#111827" />
+    </g>
+</svg>
